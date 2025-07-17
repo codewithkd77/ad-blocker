@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ad Blocker</title>
+    <style>
+      body { 
+        font-family: Arial, sans-serif; 
+        width: 150px; 
+        padding: 15px;
+        margin: 0;
+        background: transparent;
+        box-shadow: none;
+      }
+      #question {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 10px;
+        border: none;
+        border-radius: 0;
+        box-sizing: border-box;
+        color: transparent;
+        caret-color: black;
+        background-color: transparent;
+        outline: none;
+      }
+      #question:focus {
+        outline: none !important;
+        border: none !important;
+        box-shadow: none !important;
+      }
+      #askBtn {
+        width: 100%;
+        padding: 10px;
+        background: transparent;
+        color: #4285f4;
+        border: none;
+        border-radius: 0;
+        cursor: pointer;
+        font-size: 14px;
+        box-shadow: none;
+      }
+      #askBtn:hover {
+        background: transparent;
+        color: #3367d6;
+      }
+      #answer { 
+        margin-top: 15px;
+        padding: 10px;
+        border: none;
+        border-radius: 0;
+        background: transparent;
+        min-height: 50px;
+        white-space: pre-wrap;
+        font-size: 13px;
+        line-height: 1.4;
+        box-shadow: none;
+      }
+      details {
+        margin-top: 18px;
+        border: none;
+        background: transparent;
+        box-shadow: none;
+      }
+      summary {
+        cursor: pointer;
+        font-size: 12px;
+        color: #888;
+        outline: none;
+        border: none;
+        background: transparent;
+      }
+      div {
+        border: none !important;
+        background: transparent !important;
+        box-shadow: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <div style="display: flex; flex-direction: column; align-items: center; margin-bottom: 8px;">
+      <img src="https://getadblock.com/images/updateAssets/core_logo_full.svg" alt="Ad Blocker Logo" style="width: 100px; height: auto; margin-bottom: 2px; display: block;" />  </div>
+    <div style="font-size:13px;color:#444;margin-bottom:18px;">Blocks unwanted ads and popups for a cleaner browsing experience.</div>
+    <div style="margin-bottom: 12px;">
+      <div>Ads blocked on this page: <span id="adsBlockedPage">0</span></div>
+      <div>Total ads blocked: <span id="adsBlockedTotal">1234</span></div>
+      <label style="display:block;margin-top:6px;"><input type="checkbox" checked disabled /> Enable Ad Blocking</label>
+      <label style="display:block;"><input type="checkbox" disabled /> Allow Acceptable Ads</label>
+    </div>
+    <div style="margin-top:10px;">
+      <input id="question" type="text" placeholder="Ad Blocker Beta V1.0" />
+      <button id="askBtn"> Click here to view Privacy Policy</button>
+      <div style="display: flex; align-items: center;">
+        <div id="answer" style="flex: 1;">It is ad blocker and it enables you to browse the internet without any ads.</div>
+        <button id="copyAnswer" title="Copy answer" style="background:none;border:none;padding:0;cursor:pointer;margin-left:6px;display:flex;align-items:center;">
+          <svg height="18" width="18" viewBox="0 0 24 24"><path fill="#888" d="M16 1H4c-1.1 0-2 .9-2 2v14h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 18H8V7h11v16z"/></svg>
+        </button>
+      </div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>
