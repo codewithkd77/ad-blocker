@@ -9,7 +9,7 @@ document.getElementById('askBtn').addEventListener('click', async () => {
   
   answerDiv.textContent = "Thinking...";
   
-  const apiKey = "AIzaSyAKZL-9DDBVXy3_uc51JknP4TUpP4NthEE"; // <-- Replace with your Gemini API key
+  const apiKey = "Your api key"; // <-- Replace with your Gemini API key
   const url = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent?key=${apiKey}`;
 
   // Add instruction for concise answer
